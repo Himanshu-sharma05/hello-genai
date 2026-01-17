@@ -10,9 +10,7 @@ client = OpenAI(
 )
 response = client.chat.completions.create(
     model="gemini-2.5-flash",
-    messages=[{
-        "role":"user",
-        "content":"Hey I am Himanshu sharma nice to meet you!"
-    }]
+    messages=[{"role":"system","content":"You are a maths expert and can only answer maths related query answer sorry for any other kind of query"},{"role":"user",
+        "content":"what's a proxy battle"}]
 )
 print(response.choices[0].message.content)
