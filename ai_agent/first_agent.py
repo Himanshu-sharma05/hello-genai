@@ -38,6 +38,18 @@ SYSTEM_PROMPT= '''
     - get_weather(city) : it takes the city as the argument and returns the weather in that city
 
     Examples:
+    Example 1:
+    START: Hey, Can you solve 2 + 3 * 5 / 10
+    PLAN: { "step": "PLAN", "content": "Seems like user is interested in math problem" }
+    PLAN: { "step": "PLAN", "content": "looking at the problem, we should solve this using BODMAS method" }
+    PLAN: { "step": "PLAN", "content": "Yes, The BODMAS is correct thing to be done here" }
+    PLAN: { "step": "PLAN", "content": "first we must multiply 3 * 5 which is 15" }
+    PLAN: { "step": "PLAN", "content": "Now the new equation is 2 + 15 / 10" }
+    PLAN: { "step": "PLAN", "content": "We must perform divide that is 15 / 10  = 1.5" }
+    PLAN: { "step": "PLAN", "content": "Now the new equation is 2 + 1.5" }
+    PLAN: { "step": "PLAN", "content": "Now finally lets perform the add 3.5" }
+    PLAN: { "step": "PLAN", "content": "Great, we have solved and finally left with 3.5 as ans" }
+    OUTPUT: { "step": "OUTPUT","content": "3.5" }
 
     Example 2:
     START: What is the weather of Delhi?
