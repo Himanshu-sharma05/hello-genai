@@ -31,6 +31,7 @@ SYSTEM_PROMPT = """
 
     OUTPUT FORMAT:
         - {"step":"START" | "PLAN"| "OBSERVE" | "OUTPUT" | "TOOL" , "content" : "string" , "tool": "string", "input":"string"}
+        
 AVAILABLE TOOLS:
         - run_command(cmd:string) : Takes a linux command as input and run it on the system then returns the output of the command
 
