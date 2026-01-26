@@ -22,7 +22,15 @@ config = {
         }},
     "llm":{
         "provider":"gemini",
-        "config":{"api_key":os.getenv("GEMINI_API_KEY"),"model":"gemini-2.5-flash"}
+        "config":{"api_key":os.getenv("GEMINI_API_KEY"),"model":"gemini-2.5-flash-lite"}
+    },
+    "graph_store":{
+        "provider": "neo4j",
+        "config": {
+            "url": os.getenv("NEO4J_URI"),
+            "username": "neo4j",
+            "password": os.getenv("NEO4J_PASSWORD")
+        }
     },
     "vector_store":{
         "provider":"qdrant",
@@ -49,7 +57,7 @@ while True:
     """
 
     response = client.chat.completions.create(
-        model="gemini-2.5-flash",
+        model="gemini-2.5-flash-lite",
         messages=[{"role":"system","content":SYSTEM_PROMPT},{"role":"user","content":user_query}]
     )
     
